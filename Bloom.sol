@@ -33,3 +33,17 @@ func bloom9(b []byte) *big.Int{
 
   return r
 }
+
+
+//Look up bloom
+func BloomLookUp(bin Bloom, topic bytesBacked) bool{
+  bloom := bin.Big()
+  cmp:= bloom9(topic.Bytes()[:])
+  
+  return bool.And(bloom, cmp).Cmp(cmp) == 0
+
+}
+
+
+
+
