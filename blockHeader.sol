@@ -29,10 +29,4 @@ if len(uncles) == 0{
 
 return b
 
-
-
-
-
-
-
 }
